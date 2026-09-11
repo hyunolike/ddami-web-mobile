@@ -33,6 +33,32 @@ npm run start
     - `/pieces`  : 작품샵
     - `/materials` : 재료샵
 
+## Screenshots
+
+모바일 뷰포트(390 x 844) 기준 실제 화면입니다.
+API 서버를 붙이지 않은 로컬 개발 서버에서 캡쳐했기 때문에, 목록 데이터와 이미지는
+`scripts/screenshot.js`가 넣어주는 목(mock) 응답입니다.
+
+| 메인 `/` | 따미샵 `/shop/pieces` | 작업실 `/workplace/my` |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/main.png" width="240"/> | <img src="docs/screenshots/shop.png" width="240"/> | <img src="docs/screenshots/workplace.png" width="240"/> |
+
+| 로그인 `/login` | 회원가입 `/join` | 검색 `/search` |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/login.png" width="240"/> | <img src="docs/screenshots/join.png" width="240"/> | <img src="docs/screenshots/search.png" width="240"/> |
+
+| 좋아요한 작품 `/like` | 찜한 목록 `/subscribe` | 설정 `/setting` |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/like.png" width="240"/> | <img src="docs/screenshots/subscribe.png" width="240"/> | <img src="docs/screenshots/setting.png" width="240"/> |
+
+### 캡쳐 다시 만들기
+
+```
+npm run start                  # 개발 서버 (http://localhost:3000)
+npx playwright install chromium
+node scripts/screenshot.js     # docs/screenshots/*.png 갱신
+```
+
 ## Team
 
 ### Developer
