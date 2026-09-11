@@ -45,7 +45,9 @@ const PAGES = [
   ['search', '/search'],
   ['shop', '/shop/pieces'],
   ['workplace', '/workplace/my'],
+  ['write', '/workplace/write'],
   ['like', '/like'],
+  ['purchase', '/purchase'],
   ['subscribe', '/subscribe'],
   ['setting', '/setting'],
 ];

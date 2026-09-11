@@ -43,13 +43,17 @@ API 서버를 붙이지 않은 로컬 개발 서버에서 캡쳐했기 때문에
 | :---: | :---: | :---: |
 | <img src="docs/screenshots/main.png" width="240"/> | <img src="docs/screenshots/shop.png" width="240"/> | <img src="docs/screenshots/workplace.png" width="240"/> |
 
-| 로그인 `/login` | 회원가입 `/join` | 검색 `/search` |
+| 글 작성 `/workplace/write` | 로그인 `/login` | 회원가입 `/join` |
 | :---: | :---: | :---: |
-| <img src="docs/screenshots/login.png" width="240"/> | <img src="docs/screenshots/join.png" width="240"/> | <img src="docs/screenshots/search.png" width="240"/> |
+| <img src="docs/screenshots/write.png" width="240"/> | <img src="docs/screenshots/login.png" width="240"/> | <img src="docs/screenshots/join.png" width="240"/> |
 
-| 좋아요한 작품 `/like` | 찜한 목록 `/subscribe` | 설정 `/setting` |
+| 검색 `/search` | 좋아요한 작품 `/like` | 판구매 조회 `/purchase` |
 | :---: | :---: | :---: |
-| <img src="docs/screenshots/like.png" width="240"/> | <img src="docs/screenshots/subscribe.png" width="240"/> | <img src="docs/screenshots/setting.png" width="240"/> |
+| <img src="docs/screenshots/search.png" width="240"/> | <img src="docs/screenshots/like.png" width="240"/> | <img src="docs/screenshots/purchase.png" width="240"/> |
+
+| 찜한 목록 `/subscribe` | 설정 `/setting` | |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/subscribe.png" width="240"/> | <img src="docs/screenshots/setting.png" width="240"/> | |
 
 ### 캡쳐 다시 만들기
 
