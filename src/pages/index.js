@@ -1,7 +1,6 @@
 import React from "react";
 import {Route} from "react-router-dom";
 import Main from "./Main";
-import Write from "../components/workplace/Write";
 import WorkplacePage from "./WorkplacePage";
 import Search from "../components/search/Search";
 import Like from "../components/hamburger/Like";
