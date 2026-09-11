@@ -6,19 +6,19 @@ const SubscribeSection = styled.div`
   display: flex;
   width: 100%;
   height: 114px;
-  //background: yellow;
   margin-bottom: 36px;
 `;
 
 const SubImg = styled.img`
   width: 114px;
   height: 114px;
-  background: dodgerblue;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #E9E9F2;
 `;
 
 const SubSection = styled.div`
   margin-left: 14px;
-  //background: blueviolet;
   width: 214px;
   height: 100%;
 `;
@@ -26,16 +26,17 @@ const SubSection = styled.div`
 const SubTitle = styled.div`
   height: 20px;
   width: 100%;
-  //background: bisque;
 `;
 
 const WorkTitle = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 16px;
   font-weight: bold;
   color: #232323;
-  //background-color: yellow;
 `;
+
 const Title = styled.div`
   font-size: 16px;
   font-weight: bold;
@@ -43,10 +44,8 @@ const Title = styled.div`
 `;
 
 const DotImg = styled.img`
-  margin-left: 120px;
   height: 22.62px;
 `;
-
 
 const UniversityName = styled.div`
   margin-top: 8px;
@@ -61,10 +60,10 @@ const Time = styled.div`
 
 const DealSection = styled.div`
   display: flex;
+  align-items: center;
   margin-top: 23px; //디자인이 맞지가 않아 조정하였습니다.
   height: 100%;
   width: 100%;
-  //background: red;
 `;
 
 const Price = styled.div`
@@ -109,21 +108,31 @@ const TradingStop = styled.div`
   color: #FFFFFF;
 `;
 
-const PriceComponents = () => {
+// 거래 상태값 -> 배지 컴포넌트/문구
+const DEAL_STATUS = {
+    trading: [Trading, '거래 중'],
+    complete: [TradingComplete, '거래 완료'],
+    stop: [TradingStop, '거래 중단'],
+};
+
+const PriceComponents = (props) => {
+    const {fileUrl, title, universityName, time, price, status = 'trading'} = props;
+    const [DealBadge, dealText] = DEAL_STATUS[status] || DEAL_STATUS.trading;
+
     return (
         <SubscribeSection>
-            <SubImg/>
+            <SubImg src={fileUrl} alt={title}/>
             <SubSection>
                 <SubTitle>
                     <WorkTitle>
-                        <Title> 작품 이름</Title>
+                        <Title>{title}</Title>
                         <DotImg src={DotIcon} alt="메뉴아이콘"/>
                     </WorkTitle>
-                    <UniversityName>대학교 이름</UniversityName>
-                    <Time>3개월 전</Time>
+                    <UniversityName>{universityName}</UniversityName>
+                    <Time>{time}</Time>
                     <DealSection>
-                        <Trading>거래 중</Trading>
-                        <Price>50,000원</Price>
+                        <DealBadge>{dealText}</DealBadge>
+                        <Price>{price.toLocaleString()}원</Price>
                     </DealSection>
                 </SubTitle>
             </SubSection>
