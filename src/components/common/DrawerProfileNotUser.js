@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import NotUserImg from '../../static/image/img-profile-default-mid.svg';
 
 const ProfileSection = styled.div`
